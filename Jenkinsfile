@@ -61,7 +61,7 @@ pipeline {
       steps {
         container('maven') {
           dir('charts/jx-quickstart') {
-            sh "jx step changelog --version v\$(cat ../../VERSION)"
+            //sh "jx step changelog --version v\$(cat ../../VERSION)"
 
             // release the helm chart
             sh "jx step helm release"
